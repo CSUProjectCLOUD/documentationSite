@@ -1,0 +1,37 @@
+    1  lsblk
+    2  lscpu
+    3  lsusb
+    4  lspcu
+    5  lspci
+    6  lshw
+    7  lsblk
+    8  lsusb
+    9  ls
+   10  cd dev/
+   11  ls
+   12  lsblk
+   13  cd .
+   14  cd ..
+   15  mount /dev/sdc1 /mnt/nickdrive
+   16  cd mnt
+   17  ls
+   18  mkdir nickdrivew
+   19  mkdir nickdrive
+   20  cd ..
+   21  mount /dev/sdc1 /mnt/nickdrive
+   22  cd /mnt/nickdrive
+   23  ls
+   24  lspci >> r710A_LSPCI.txt
+   25  cat r710A_LSPCI.txt 
+   26  free -m >> r710A_RAM.txt
+   27  lsblk >> r710A_LSBLK.txt
+   28  lshw >> r710A_LSHW.txt
+   29  lshw -short >> r710A_LSHW_short.txt
+   30  lscpu >> r710A_LSCPU.txt
+   31  lsusb >> r710A_LSUSB.txt
+   32  hparm
+   33  hdparm
+   34  hdparm -g
+   35  fdisk >> r710A_fdisk.txt
+   36  fdisk -l >> r710A_fdisk.txt
+   37  history >> r710A_HISTORY.txt

@@ -1,0 +1,9 @@
+Bus 002 Device 003: ID 03f0:564a HP, Inc HP 125 Wired Keyboard
+Bus 002 Device 002: ID 8087:8002 Intel Corp. 8 channel internal hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 005: ID 413c:a001 Dell Computer Corp. Hub
+Bus 001 Device 006: ID 04f2:4141 Chicony Electronics Co., Ltd HP 320M USB Optical Mouse
+Bus 001 Device 004: ID 0781:55ab SanDisk Corp.  SanDisk 3.2Gen1
+Bus 001 Device 003: ID 090c:1000 Silicon Motion, Inc. - Taiwan (formerly Feiya Technology Corp.) Flash Drive
+Bus 001 Device 002: ID 8087:800a Intel Corp. Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
