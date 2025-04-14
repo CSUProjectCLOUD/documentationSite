@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>RAID Config.docx - Project CLOUD</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Project CLOUD</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../../../DevStackInstallation/" class="nav-link">Installing DevStack</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../../../kubernetes/" class="nav-link">Kubernetes</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">General</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../KollaAnsibleInstallDeps.docx/" class="dropdown-item">KollaAnsibleInstallDeps.docx</a>
+</li>
+                                    
+<li>
+    <a href="../../../../Kubernetes%20Research.docx/" class="dropdown-item">Kubernetes Research.docx</a>
+</li>
+                                    
+<li>
+    <a href="../../../../Mini%20Charter%20%28Private%20Cloud%20Server%29.docx/" class="dropdown-item">Mini Charter (Private Cloud Server).docx</a>
+</li>
+                                    
+<li>
+    <a href="../../../../charter%20scratchpad.docx/" class="dropdown-item">Charter scratchpad.docx</a>
+</li>
+                                    
+<li>
+    <a href="../../../../kubernetes/" class="dropdown-item">Kubernetes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Agile Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../Agile%20Documentation/Cycle%201%20Report.docx/" class="dropdown-item">Cycle 1 Report.docx</a>
+</li>
+            
+<li>
+    <a href="../../../../Agile%20Documentation/Sprint%206%20Report.docx/" class="dropdown-item">Sprint Goal</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Engineering Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Server%20Port%20Address%20Allocation.docx/" class="dropdown-item">Server Port Address Allocation.docx</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration and Installation Docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../DevStack_noHostsMapped.docx/" class="dropdown-item">DevStack noHostsMapped.docx</a>
+</li>
+            
+<li>
+    <a href="../../Kubernetes%20Research.docx/" class="dropdown-item">Kubernetes Research.docx</a>
+</li>
+            
+<li>
+    <a href="../../Raid%20Discussion%20.docx/" class="dropdown-item">Power Edge Specs</a>
+</li>
+            
+<li>
+    <a href="../../Template%20Guide.docx/" class="dropdown-item">Template Guide.docx</a>
+</li>
+            
+<li>
+    <a href="../../Template_DuplicateForNewDocument.docx/" class="dropdown-item">Objectives</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG DevStack Playground</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CDG%20DevStack%20Playground/DevStack%20Bugs.docx/" class="dropdown-item">DevStack Bugs.docx</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20DevStack%20Playground/DevStackInstallation/" class="dropdown-item">Installing DevStack</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20DevStack%20Playground/DevStack_Installation.docx/" class="dropdown-item">Installing DevStack</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20DevStack%20Playground/Image%20Templates.docx/" class="dropdown-item">Image Templates.docx</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Network</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CDG%20Network/Navigating%20Configuration%20Files.docx/" class="dropdown-item">Navigating Configuration Files.docx</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Network Configurations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CDG%20Network/CDG%20Network%20Configurations/Cisco%20Switch%20First%20Time%20Setup.docx/" class="dropdown-item">First Time Configurations in CLI</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Network/CDG%20Network%20Configurations/Connecting%20Servers%20to%20Switch%20VLAN.docx/" class="dropdown-item">Connecting Servers to VLAN</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Network/CDG%20Network%20Configurations/Internet%20Access%20via%20Wall%20Port.docx/" class="dropdown-item">Internet Access via Wall Port.docx</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Network/CDG%20Network%20Configurations/Reading%20Serial%20Data%20on%20Cisco%20Switch%20with%20Windows%2011%20PC.docx/" class="dropdown-item">Reading Serial Data on Cisco Switch with Windows 11 PC.docx</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Network/CDG%20Network%20Configurations/VLAN%20Configuration.docx/" class="dropdown-item">VLAN Configuration.docx</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Network Info</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CDG%20Network/CDG%20Network%20Info/Cisco%20Switch%20IP%20and%20MAC%20Addresses.docx/" class="dropdown-item">IP and MAC Addresses of Cisco Switch</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Network/CDG%20Network%20Info/Dell%20Server%20MAC%20Addresses.docx/" class="dropdown-item">MAC Addresses:</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Server OS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CDG%20Server%20OS/KVM%20Installation%20.docx/" class="dropdown-item">Installing KVM R710 &amp; 730</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Server%20OS/KVM%20Installation.docx/" class="dropdown-item">Installing KVM R710 &amp; 730</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Server%20OS/Operating%20System%20Installation.docx/" class="dropdown-item">Operating System Installation.docx</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Server%20OS/SSH.docx/" class="dropdown-item">SSH Installation</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Server Remote Controller</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CDG%20Server%20Remote%20Controller/Adjusting%20iDRAC6%20basic%20config.docx/" class="dropdown-item">Adjusting iDRAC6 basic config.docx</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Server%20Remote%20Controller/IP%20Address%20Setup%20for%20R710.docx/" class="dropdown-item">IP Address Setup for R710.docx</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Server%20Remote%20Controller/IP%20Address%20Setup%20for%20R730.docx/" class="dropdown-item">IP Address Setup for R730.docx</a>
+</li>
+            
+<li>
+    <a href="../../CDG%20Server%20Remote%20Controller/iDRAC%20config.docx/" class="dropdown-item">iDRAC config.docx</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Servers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../PowerRack%20Wiring.docx/" class="dropdown-item">Power Edge Wiring Configuration</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">RAID Config.docx</a>
+</li>
+            
+<li>
+    <a href="../kolla-anisble%20doc.docx/" class="dropdown-item">Kolla anisble doc.docx</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">POCs and SPIKEs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../POCs%20and%20SPIKEs/Proof%20of%20Concept.docx/" class="dropdown-item">Proof of Concept.docx</a>
+</li>
+            
+<li>
+    <a href="../../../POCs%20and%20SPIKEs/Raid%20Reassessment.docx/" class="dropdown-item">RAID REASSESSMENT</a>
+</li>
+            
+<li>
+    <a href="../../../POCs%20and%20SPIKEs/SPIKE%20-%20OpenStack%20Architecture%20and%20Analysis.docx/" class="dropdown-item">SPIKE   OpenStack Architecture and Analysis.docx</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../PowerRack%20Wiring.docx/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../kolla-anisble%20doc.docx/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Configuring RAID</p>
+<p><a href="https://www.youtube.com/watch?v=EPe0BOJDMcA">Video for this
+Configuration</a></p>
+<p>I thought I needed to initialize for PowerEdge 710B. I had to go to
+system setup and change the boot sequence to select just the Integrated
+RAID option. I am having an issue with Linux not coming up after the
+initializing of RAID. Conclusion: When you initialize the RAID, then you
+have to upload Ubuntu and KVM again. This took awhile. The RAID is
+already configured on the servers.</p>
+<p>RAID levels explained in this
+<a href="https://www.booleanworld.com/raid-levels-explained/">link</a></p>
+<p>RAID levels comparison chart
+<a href="https://www.raid-calculator.com/raid-types-reference.aspx">link</a></p>
+<p>RAID Real World Performance
+<a href="https://larryjordan.com/articles/real-world-speed-tests-for-different-hdd-raid-levels/">link</a></p>
+<p>We can configure the RAID using function F10 instead of control R.</p>
+<p>F2: I changed the boot sequence to: Hard Drive, Embedded, then SATA --
+to change the boot order you just press the minus or plus key on the
+keyboard to move the order around.</p>
+<p>I pressed F2 in BIOS configuration and selected check consistency to
+verify and correct parity or mirror for fault tolerance on virtual disk.
+It is recommended by dell.com
+<a href="https://www.dell.com/support/kbdoc/en-us/000139796/perc-how-to-perform-a-check-consistency-using-openmanage-server-administrator">link</a>
+(performed every 30 days) The consistency takes a while but is
+recommended every 30 days, so it is done for the R710b.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js"></script>
+        <script src="../../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0 149.9M  1 loop /rofs
+loop1    7:1    0   121M  1 loop 
+loop2    7:2    0 603.8M  1 loop 
+loop3    7:3    0 247.9M  1 loop 
+loop4    7:4    0 149.9M  1 loop /media/minimal
+loop5    7:5    0   121M  1 loop /media/full
+loop6    7:6    0  74.3M  1 loop /snap/core22/1564
+loop7    7:7    0  38.8M  1 loop /snap/snapd/21759
+loop8    7:8    0  20.1M  1 loop /snap/subiquity/6066
+sda      8:0    0 836.6G  0 disk 
+sdb      8:16   1 119.5G  0 disk 
+|-sdb1   8:17   1 119.5G  0 part 
+`-sdb2   8:18   1    32M  0 part 
+sdc      8:32   1 114.6G  0 disk 
+`-sdc1   8:33   1 114.6G  0 part /mnt/nickdrive
+sr0     11:0    1  1024M  0 rom  
