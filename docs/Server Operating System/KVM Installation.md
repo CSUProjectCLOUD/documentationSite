@@ -1,4 +1,4 @@
-Installing KVM R710 & 730
+# Installing KVM R710 & 730
 =========================
 
 We followed the link to install the KVM for the servers.

@@ -22,7 +22,7 @@
   Project Manager                       
 
   Functional Manager/\                  
-  Data Stewart                          
+  Data Stewart
 
   Stakeholder                           
 

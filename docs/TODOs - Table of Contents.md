@@ -1,6 +1,6 @@
 # TODOs - Table of Contents 
 
-## Overview: Write (Mostly collecting existing info)
+## Overview: Write (Mostly collecting existing info) (Doc)
 
 - Purpose of project 
 
@@ -12,7 +12,7 @@
 
 - Key Contacts/Contributors/Stakeholders (Write)
 
-## System Architecture 
+## System Architecture (Folder ?)
 
 - Overview Diagram (Create ?)
 
@@ -22,13 +22,13 @@
 
 - DevStack vs. Production (write)
 
-## Server Setup 
+## Server Setup (Folder)
 
 - Operating System Installation 
 
 - iDRAC configuration 
 
-## DevStack Proof of Concept 
+## DevStack Proof of Concept (Folder)
 
 - Installation 
 
@@ -38,7 +38,7 @@
 
 - Lessons Learned & Limitations 
 
-## Production Deployment Plan 
+## Production Deployment Plan (Doc?)
 
 - Recommended Tools 
 
@@ -50,7 +50,7 @@
 
 - High Availability & Redundancy Plans 
 
-## Networking Setup 
+## Networking Setup (Folder)
 
 - Introduction & Issues 
 
@@ -60,7 +60,7 @@
 
 - CISCO Switch 
 
-## Storage Configuration 
+## Storage Configuration (Doc)
 
 - RAID Level & Rationale 
 
@@ -68,7 +68,7 @@
 
 - Deployment Plans 
 
-## Security Considerations 
+## Security Considerations (Doc)
 
 - Secure Configuration 
 
@@ -76,13 +76,13 @@
 
 - Deployment Plans 
 
-## Troubleshooting 
+## Troubleshooting (Doc)
 
 - Common Problems 
 
 - Investigation Steps 
 
-## Appendices 
+## Appendices (Folder)
 
 - Glossary 
 
