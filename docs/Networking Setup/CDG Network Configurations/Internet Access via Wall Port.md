@@ -1,22 +1,18 @@
+# Internet Access via Wall Port
+
 **Authors:** Jaden Jefferson
 
 **Last Updated:** 24 Mar 2025
 
-Connecting to Internet through Wall Port
-========================================
+## Objective
 
-Objective:
-----------
+- Convert to an L3 switch
 
--   Convert to an L3 switch
+- Set default-gateway and ip route to that of the universities wall port
 
--   Set default-gateway and ip route to that of the universities wall
-    port
+- Set VLAN 2 to allow DHCP
 
--   Set VLAN 2 to allow DHCP
-
-CLI Set Up
-----------
+## CLI Set Up
 
 switch1\>enable
 
@@ -36,8 +32,7 @@ switch1(config-if)\# end
 
 switch1\#write memory
 
-Physical Set Up
----------------
+## Physical Set Up
 
 Plug an ethernet cable of cat5 or 6 into any port 7 through 12. If
 unsure of the ports contained in vlan 2. Run *show vlan brief* if
@@ -45,8 +40,7 @@ unsure.
 
 Plug the other end into the wall port that contains the default-gateway
 
-Confirming
-----------
+## Confirming
 
 switch1\# show running-config \| include default-gateway
 
@@ -56,8 +50,7 @@ switch1\# show ip interface brief
 
 switch1\# show interfaces vlan 2
 
-Testing
--------
+## Testing
 
 switch1\# ping 10.12.112.1
 

@@ -1,8 +1,9 @@
 # Project CLOUD Documentation
 
-This site is the documentation for Project CLOUD, a project aiming to create a private cloud for use by computer science students at Columbus State University. 
+This site is the documentation for Project CLOUD, a project aiming to create a private cloud for use by computer science students at Columbus State University.
 
 ## Documentation TODOs
+
 - Structure site directory
 - Format specs document
 - Fix formatting for all documents (Specifics in TOC todo)
@@ -18,10 +19,10 @@ Potentially, information from Agile reports could be condensed into a page or tw
 
 ## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- `mkdocs new [dir-name]` - Create a new project.
+- `mkdocs serve` - Start the live-reloading docs server.
+- `mkdocs build` - Build the documentation site.
+- `mkdocs -h` - Print help message and exit.
 
 ## Project layout
 

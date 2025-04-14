@@ -16,15 +16,15 @@ suggested info greyed out prior to inputting characters.\
 For the IPv6 address, it'll ask the same as IPv4. Can use a generic IP
 such as:
 
--   **Static IP Address 1:** fd12:3456:789a:1::1
+- **Static IP Address 1:** fd12:3456:789a:1::1
 
--   **Static Prefix Length:** 64
+- **Static Prefix Length:** 64
 
--   **Static Gateway:** f380::1
+- **Static Gateway:** f380::1
 
--   **Link Local Address:** fe80:b283:feff:fee8:f3be
+- **Link Local Address:** fe80:b283:feff:fee8:f3be
 
--   **IP Address 2:** ::
+- **IP Address 2:** ::
 
 As changes are made to initial setup following the guide they will be
 noted here:

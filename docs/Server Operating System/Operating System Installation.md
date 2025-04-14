@@ -1,4 +1,4 @@
-Introduction:
+Introduction
 =============
 
 This document is a set of instructions for installing operating systems
@@ -8,36 +8,36 @@ because it's an industry standard free and open-source OS for servers.
 Alternative operating systems included RHEL and SUSE Server; Ubuntu beat
 these due to widespread usage and personal familiarity.
 
-Requirements:
+Requirements
 =============
 
--   USB flash drive, at least 16 GB
+- USB flash drive, at least 16 GB
 
--   Server able to boot to BIOS and connect to Internet via wired
+- Server able to boot to BIOS and connect to Internet via wired
     connection
 
-Downloads:
+Downloads
 ----------
 
--   Ubuntu Server 24.04.01 LTS **ISO**
+- Ubuntu Server 24.04.01 LTS **ISO**
 
-    -   <https://ubuntu.com/download/server>
+  - <https://ubuntu.com/download/server>
 
--   Ventoy 1.1.00 **LiveCD ISO** and **Executable**
+- Ventoy 1.1.00 **LiveCD ISO** and **Executable**
 
-    -   <https://github.com/ventoy/Ventoy/releases/tag/v1.1.00>
+  - <https://github.com/ventoy/Ventoy/releases/tag/v1.1.00>
 
-    -   Linux tarball or Windows zip
+  - Linux tarball or Windows zip
 
-Instructions:
+Instructions
 =============
 
-1.  **Ensure that there is no important data on your flash drive or
+1. **Ensure that there is no important data on your flash drive or
     > server storage drives!**
 
-2.  Place all the downloaded files into the same directory.
+2. Place all the downloaded files into the same directory.
 
-3.  Install Ventoy on your flash drive:
+3. Install Ventoy on your flash drive:
 
     a.  On Linux:
 
@@ -55,20 +55,20 @@ Instructions:
 
         iii. Click Install
 
-4.  Transfer the Ubuntu Server ISO to the flash drive from your file
+4. Transfer the Ubuntu Server ISO to the flash drive from your file
     explorer.
 
-5.  Eject flash drive from your PC.
+5. Eject flash drive from your PC.
 
-6.  Shut server off. Plug in flash drive.
+6. Shut server off. Plug in flash drive.
 
-7.  Connect the server to the network by plugging an Ethernet cable into
+7. Connect the server to the network by plugging an Ethernet cable into
     > its network port 1 and the wall jack. Ensure that the Ethernet
     > cable is not in the iDRAC port.
 
-8.  Boot server. Press F11 repeatedly to access the BIOS Boot Manager.
+8. Boot server. Press F11 repeatedly to access the BIOS Boot Manager.
 
-9.  In the BIOS Boot Manager, select the flash drive. It may be under
+9. In the BIOS Boot Manager, select the flash drive. It may be under
     Hard Drives.
 
 10. Boot into the flash drive.
@@ -144,7 +144,7 @@ Instructions:
 26. You should now be able to log in with the username and password you
     provided.
 
-Addendum:
+Addendum
 =========
 
 Linux is the family of operating systems which run on the Linux kernel.
@@ -188,7 +188,7 @@ about Linux and BSD distributions.
 
 I will also be happy to share more information on Linux if desired.
 
-References:
+References
 ===========
 
 <https://www.ventoy.net/en/doc_start.html>

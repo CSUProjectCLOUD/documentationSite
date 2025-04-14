@@ -1,4 +1,4 @@
-Configuring RAID
+# Configuring RAID
 
 [Video for this
 Configuration](https://www.youtube.com/watch?v=EPe0BOJDMcA)

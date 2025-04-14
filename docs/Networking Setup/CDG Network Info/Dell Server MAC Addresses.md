@@ -1,4 +1,4 @@
-MAC Addresses:
+MAC Addresses
 ==============
 
 PowerEdge 710

@@ -1,26 +1,26 @@
+# Reading Serial Data on Cisco Switch with Windows 11
+
 **Authors:** Jaden Jefferson
 
 **Last Updated:** 6 Mar 2025
 
 How to Read Serial Data on a Cisco 2960-X Switch using Windows 11
 
-Objective
----------
+## Objectives
 
--   Read Cisco serial data transmitted over console port
+- Read Cisco serial data transmitted over console port
 
--   Begin initial configurations through Cisco CLI
+- Begin initial configurations through Cisco CLI
 
--   Ping switch from PC
+- Ping switch from PC
 
--   Ping PC from switch
+- Ping PC from switch
 
 **Note:** If your device has already been set up and you would like to
 read serial data from your device, please read Getting Port Driver and
 PuTTY and Step 6 of First Time Setup
 
-Getting Port Driver and PuTTY
------------------------------
+## Getting Port Driver and PuTTY
 
 Serial data will be transmitted from the switch to your PC using the
 switch's console port and your PC's USB port. However, your system may
@@ -33,8 +33,7 @@ the the zip file. For more information on this process, please follow
 the attached README file. **For PuTTY**, here is an available
 [download](https://www.putty.org/).
 
-First Time Setup
-----------------
+## First Time Setup
 
 **Note:** This is only needed if using a brand new switch or one that
 has been wiped.
@@ -55,22 +54,22 @@ The provided Cisco document is outdated so please read carefully. We
 will use multiple documents for this configuration pointing to the exact
 sections needed for each.
 
-**Step 6**
+### Step 6
 
 Now that you have completed steps 1-5, we should now be able to read
 serial data via the console port.
 
-1.  Using the micro-B console port, plug the USB micro-B port into the
+1. Using the micro-B console port, plug the USB micro-B port into the
     switch and the USB-A port into your laptop.
 
     a.  You will also be able to use any console port rj-45 or micro-b
         to USB-B for serial data to be transmitted to your pc.
 
-2.  Open Device Manager
+2. Open Device Manager
 
 > Check the COM port of your new plugged in device
 
-3.  Open Putty
+3. Open Putty
 
-4.  Insert the Serial COM Port seen in Device Manager, select serial
+4. Insert the Serial COM Port seen in Device Manager, select serial
     speed 9600, Connect type Serial and Telnet, Then click *Open*

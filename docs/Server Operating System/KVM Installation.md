@@ -1,5 +1,4 @@
 # Installing KVM R710 & 730
-=========================
 
 We followed the link to install the KVM for the servers.
 [link](https://www.linuxtechi.com/how-to-install-kvm-on-ubuntu-22-04/)

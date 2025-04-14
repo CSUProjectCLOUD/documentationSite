@@ -2,29 +2,31 @@ Documentation of iDRAC configuration for PowerEdge 710 & 730:
 
 Steps needed to configure iDRAC:
 
--   Boot the server and press control+E
+- Boot the server and press control+E
 
--   Navigated to network settings and choose static IP address
+- Navigated to network settings and choose static IP address
 
--   Set the appropriate IP
-
-```{=html}
-<!-- -->
-```
--   subnet mask
-
--   gateway details,
-
--   Set it back to DHCP.
+- Set the appropriate IP
 
 ```{=html}
 <!-- -->
 ```
--   Set password for accessing the iDRAC for remote access.
 
-    -   cloudadmin
+- subnet mask
 
--   Rebooted the servers to save changes made in iDRAC configuration.
+- gateway details,
+
+- Set it back to DHCP.
+
+```{=html}
+<!-- -->
+```
+
+- Set password for accessing the iDRAC for remote access.
+
+  - cloudadmin
+
+- Rebooted the servers to save changes made in iDRAC configuration.
 
 iDRAC configuration
 [link](https://thebackroomtech.com/2017/09/27/setup-configure-idrac-dell-poweredge-servers/)
@@ -65,15 +67,15 @@ Controller (iDRAC) 6, 7, 8 and 9.\
 \
 Benefits of using the virtual media function are:
 
--   Updating all server firmware using the matching bootable image (ISO
+- Updating all server firmware using the matching bootable image (ISO
     file) for your server.
 
--   Installing an operating system on your server directly from the ISO.
+- Installing an operating system on your server directly from the ISO.
     Read [[How to Install the Operating System on a Dell PowerEdge
     Server]{.underline}](https://www.dell.com/support/kbdoc/en-us/000130160/how-to-install-the-operating-system-on-a-dell-poweredge-server-os-deployment)
     for more information.
 
--   Viewing video output from the server and using the local mouse and
+- Viewing video output from the server and using the local mouse and
     keyboard as if you were in the same room.
 
 If you want to find more detailed information about this and other

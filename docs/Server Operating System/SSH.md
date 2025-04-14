@@ -12,7 +12,7 @@ In order to install OpenSSH in the event it is not already installed,
 use the following command:
 
 ```console
-$ sudo apt install openssh-client openssh-server
+sudo apt install openssh-client openssh-server
 ```
 
 The SSH IPs for the servers are as follows:\

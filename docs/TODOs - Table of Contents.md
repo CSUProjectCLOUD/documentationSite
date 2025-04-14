@@ -1,12 +1,12 @@
-# TODOs - Table of Contents 
+# TODOs - Table of Contents
 
 ## Overview: Write (Mostly collecting existing info) (Doc)
 
-- Purpose of project 
+- Purpose of project
 
-- Current status 
+- Current status
 
-- Intended Use Cases 
+- Intended Use Cases
 
 - Key Concepts (Write)
 
@@ -14,78 +14,78 @@
 
 ## System Architecture (Folder ?)
 
+*not much done here, at least not written out.*
+
 - Overview Diagram (Create ?)
 
 - Hardware Inventory (Write/consolidate)
 
-- Logical Architecture 
+- Logical Architecture
 
 - DevStack vs. Production (write)
 
 ## Server Setup (Folder)
 
-- Operating System Installation 
+- Operating System Installation
 
-- iDRAC configuration 
+- iDRAC configuration
 
 ## DevStack Proof of Concept (Folder)
 
-- Installation 
+- Installation
 
-- Configuration Details 
+- Configuration Details
 
-- Known Issues 
+- Known Issues
 
-- Lessons Learned & Limitations 
+- Lessons Learned & Limitations
 
 ## Production Deployment Plan (Doc?)
 
-- Recommended Tools 
+- Recommended Tools
 
-- Chosen Deployment Method 
+- Chosen Deployment Method
 
-- Environment Preparation 
+- Environment Preparation
 
-- OpenStack Services to Deploy 
+- OpenStack Services to Deploy
 
-- High Availability & Redundancy Plans 
+- High Availability & Redundancy Plans
 
 ## Networking Setup (Folder)
 
-- Introduction & Issues 
+- Introduction & Issues
 
-- Network Topology 
+- Network Topology
 
-- VLANS/Subnets 
+- VLANS/Subnets
 
-- CISCO Switch 
+- CISCO Switch
 
 ## Storage Configuration (Doc)
 
-- RAID Level & Rationale 
+- RAID Level & Rationale
 
-- Current Setup 
+- Current Setup
 
-- Deployment Plans 
+- Deployment Plans
 
 ## Security Considerations (Doc)
 
-- Secure Configuration 
+- Secure Configuration
 
-- Identity Management 
+- Identity Management
 
-- Deployment Plans 
+- Deployment Plans
 
 ## Troubleshooting (Doc)
 
-- Common Problems 
+- Common Problems
 
-- Investigation Steps 
+- Investigation Steps
 
 ## Appendices (Folder)
 
-- Glossary 
+- Glossary
 
-- References & Useful Links 
-
- 
+- References & Useful Links

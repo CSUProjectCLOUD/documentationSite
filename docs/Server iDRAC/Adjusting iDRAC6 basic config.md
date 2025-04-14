@@ -9,51 +9,59 @@ changes made in iDRAC configurations. We have more components that will
 be worked on in following stories as we look at setting up all the basic
 aspects of iDRAC6.
 
-Documentation of iDRAC configuration for PowerEdge 710 & 730: 
+Documentation of iDRAC configuration for PowerEdge 710 & 730:
 
-Steps needed to configure iDRAC: 
+Steps needed to configure iDRAC:
 
--   Boot the server and press control+E 
-
-```{=html}
-<!-- -->
-```
--   Navigated to network settings and choose static IP address 
+- Boot the server and press control+E
 
 ```{=html}
 <!-- -->
 ```
--   Set the appropriate IP 
+
+- Navigated to network settings and choose static IP address
 
 ```{=html}
 <!-- -->
 ```
--   subnet mask 
+
+- Set the appropriate IP
 
 ```{=html}
 <!-- -->
 ```
--   gateway details,  
+
+- subnet mask
 
 ```{=html}
 <!-- -->
 ```
--   Set it back to DHCP. 
+
+- gateway details,  
 
 ```{=html}
 <!-- -->
 ```
--   Set password for accessing the iDRAC for remote access. 
+
+- Set it back to DHCP.
 
 ```{=html}
 <!-- -->
 ```
--   cloudadmin 
+
+- Set password for accessing the iDRAC for remote access.
 
 ```{=html}
 <!-- -->
 ```
--   Rebooted the servers to save changes made in iDRAC configuration. 
+
+- cloudadmin
+
+```{=html}
+<!-- -->
+```
+
+- Rebooted the servers to save changes made in iDRAC configuration.
 
 iDRAC configuration
-[link](https://thebackroomtech.com/2017/09/27/setup-configure-idrac-dell-poweredge-servers/) 
+[link](https://thebackroomtech.com/2017/09/27/setup-configure-idrac-dell-poweredge-servers/)
