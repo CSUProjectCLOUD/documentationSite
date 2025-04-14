@@ -1,0 +1,4 @@
+site_name: Project CLOUD
+repo_url: https://github.com/CSUProjectCLOUD/documentationSite
+theme:
+  name: readthedocs

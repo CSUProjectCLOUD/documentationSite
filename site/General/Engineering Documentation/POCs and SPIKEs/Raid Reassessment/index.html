@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>RAID REASSESSMENT - Project CLOUD</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Project CLOUD</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../../.." class="nav-link">Project CLOUD Documentation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../../DevStackInstallation/" class="nav-link">Installing DevStack</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../../kubernetes/" class="nav-link">Kubernetes</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">General</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../KollaAnsibleInstallDeps/" class="dropdown-item">KollaAnsibleInstallDeps</a>
+</li>
+                                    
+<li>
+    <a href="../../../Kubernetes%20Research/" class="dropdown-item">Kubernetes Research</a>
+</li>
+                                    
+<li>
+    <a href="../../../Mini%20Charter%20%28Private%20Cloud%20Server%29/" class="dropdown-item">Mini Charter (Private Cloud Server)</a>
+</li>
+                                    
+<li>
+    <a href="../../../charter%20scratchpad/" class="dropdown-item">Charter scratchpad</a>
+</li>
+                                    
+<li>
+    <a href="../../../docsOutline/" class="dropdown-item">docsOutline</a>
+</li>
+                                    
+<li>
+    <a href="../../../kubernetes/" class="dropdown-item">Kubernetes</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Agile Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Agile%20Documentation/Cycle%201%20Report.docx/" class="dropdown-item">Cycle 1 Report.docx</a>
+</li>
+            
+<li>
+    <a href="../../../Agile%20Documentation/Sprint%206%20Report.docx/" class="dropdown-item">Sprint Goal</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Engineering Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Server%20Port%20Address%20Allocation/" class="dropdown-item">Server Port Address Allocation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration and Installation Docs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/DevStack_noHostsMapped/" class="dropdown-item">DevStack noHostsMapped</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/Kubernetes%20Research/" class="dropdown-item">Kubernetes Research</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/Raid%20Discussion/" class="dropdown-item">Power Edge Specs</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG DevStack Playground</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20DevStack%20Playground/DevStack%20Bugs.docx/" class="dropdown-item">DevStack Bugs.docx</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20DevStack%20Playground/DevStackInstallation/" class="dropdown-item">Installing DevStack</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20DevStack%20Playground/DevStack_Installation.docx/" class="dropdown-item">Installing DevStack</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20DevStack%20Playground/Image%20Templates.docx/" class="dropdown-item">Image Templates.docx</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Network</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/Navigating%20Configuration%20Files.docx/" class="dropdown-item">Navigating Configuration Files.docx</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Network Configurations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/CDG%20Network%20Configurations/Cisco%20Switch%20First%20Time%20Setup.docx/" class="dropdown-item">First Time Configurations in CLI</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/CDG%20Network%20Configurations/Connecting%20Servers%20to%20Switch%20VLAN.docx/" class="dropdown-item">Connecting Servers to VLAN</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/CDG%20Network%20Configurations/Internet%20Access%20via%20Wall%20Port.docx/" class="dropdown-item">Internet Access via Wall Port.docx</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/CDG%20Network%20Configurations/Reading%20Serial%20Data%20on%20Cisco%20Switch%20with%20Windows%2011%20PC.docx/" class="dropdown-item">Reading Serial Data on Cisco Switch with Windows 11 PC.docx</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/CDG%20Network%20Configurations/VLAN%20Configuration.docx/" class="dropdown-item">VLAN Configuration.docx</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Network Info</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/CDG%20Network%20Info/Cisco%20Switch%20IP%20and%20MAC%20Addresses.docx/" class="dropdown-item">IP and MAC Addresses of Cisco Switch</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Network/CDG%20Network%20Info/Dell%20Server%20MAC%20Addresses.docx/" class="dropdown-item">MAC Addresses:</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Server OS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Server%20OS/KVM%20Installation/" class="dropdown-item">Installing KVM R710 &amp; 730</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Server%20OS/Operating%20System%20Installation/" class="dropdown-item">Operating System Installation</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Server%20OS/SSH/" class="dropdown-item">SSH Installation</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Server Remote Controller</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Server%20Remote%20Controller/Adjusting%20iDRAC6%20basic%20config/" class="dropdown-item">Adjusting iDRAC6 basic config</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Server%20Remote%20Controller/IP%20Address%20Setup%20for%20R710/" class="dropdown-item">IP Address Setup for R710</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Server%20Remote%20Controller/IP%20Address%20Setup%20for%20R730/" class="dropdown-item">IP Address Setup for R730</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Server%20Remote%20Controller/iDRAC%20config/" class="dropdown-item">iDRAC config</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CDG Servers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Servers/PowerRack%20Wiring/" class="dropdown-item">Power Edge Wiring Configuration</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Servers/RAID%20Config/" class="dropdown-item">RAID Config</a>
+</li>
+            
+<li>
+    <a href="../../Configuration%20and%20Installation%20Docs/CDG%20Servers/kolla-anisble%20doc/" class="dropdown-item">Kolla anisble doc</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">POCs and SPIKEs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Proof%20of%20Concept/" class="dropdown-item">Proof of Concept</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">RAID REASSESSMENT</a>
+</li>
+            
+<li>
+    <a href="../SPIKE%20-%20OpenStack%20Architecture%20and%20Analysis/" class="dropdown-item">SPIKE   OpenStack Architecture and Analysis</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Proof%20of%20Concept/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../SPIKE%20-%20OpenStack%20Architecture%20and%20Analysis/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/General/Engineering Documentation/POCs and SPIKEs/Raid Reassessment.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#raid-reassessment" class="nav-link">RAID REASSESSMENT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#power-edge-specs" class="nav-link">Power Edge Specs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#example-node-spec-recommendations-table-11" class="nav-link">Example Node Spec Recommendations (Table 1.1)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3-node-architecture-figures" class="nav-link">3 Node Architecture Figures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="raid-reassessment">RAID REASSESSMENT</h1>
+<p>Purpose</p>
+<p>To get an overall architecture in what each overall node will be used
+for. After assessing any hardware constraints, we may encounter based on
+recommendations set forth by the OpenStack book 1.1. We formed a general
+idea that RAID 5 would initially be the desired level to partition the
+data and provide fault tolerance with low overhead on the drives.</p>
+<h1 id="power-edge-specs">Power Edge Specs</h1>
+<p><a href="https://www.itcreations.com/dell/dell-poweredge-r710-server?srsltid=AfmBOopiuocmKpkZ2reUJbVo480PnP2ThB9QjnACoX9cHaCPtlcaV0OC">Power Edge
+R710</a>
+x 2:</p>
+<ul>
+<li>
+<p>CPU: 2</p>
+</li>
+<li>
+<p>Cores: 16</p>
+</li>
+<li>
+<p>Disks: 4 x 2.65GB</p>
+<ul>
+<li>
+<p>4 x RAID5</p>
+</li>
+<li>
+<p>description: RAID bus controller, product: MegaRAID SAS 1078</p>
+</li>
+<li>
+<p>description: SCSI Disk, size: 836GiB (898GB)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://savemyserver.com/dell-r730-tech-specs/?srsltid=AfmBOoq8wDtU_b4yGmLakQAp__Z7qTNVaCr7XTUl8EMeCvr2kWod4BQb">Power Edge
+R730</a>:</p>
+<ul>
+<li>
+<p>CPU: 2</p>
+</li>
+<li>
+<p>Cores: 40</p>
+</li>
+<li>
+<p>Disks: 8 x 3.6TB</p>
+<ul>
+<li>1 x RAID0, 7 x RAID5</li>
+</ul>
+</li>
+</ul>
+<p><strong>Total</strong></p>
+<ul>
+<li>
+<p>CPU: 6</p>
+</li>
+<li>
+<p>Cores: 72</p>
+</li>
+<li>
+<p>Disks: 8 x 2.65GB, 8 x 3.6TB</p>
+</li>
+<li>
+<p>Network: 12 ports</p>
+</li>
+</ul>
+<p><strong>Name</strong>    <strong>Virtual cores</strong>   <strong>Memory</strong>   <strong>Disk</strong>   <strong>Ephemeral</strong></p>
+<hr />
+<p>m1.tiny     1                   512 MB       1 GB       0 GB
+  m1.small    1                   2 GB         10 GB      20 GB
+  m1.medium   2                   4 GB         10 GB      40 GB
+  m1.large    4                   8 GB         10 GB      80 GB
+  m1.xlarge   8                   16 GB        10 GB      160 GB</p>
+<p><a href="https://people.csail.mit.edu/jon/openstack-ops/openstack-ops-manual.pdf">https://people.csail.mit.edu/jon/openstack-ops/openstack-ops-manual.pdf</a></p>
+<h1 id="example-node-spec-recommendations-table-11">Example Node Spec Recommendations (Table 1.1)</h1>
+<p><strong>Controller -- 710A with RAID 5</strong></p>
+<ul>
+<li>
+<p>CPU: 2</p>
+</li>
+<li>
+<p>Cores: 12</p>
+</li>
+<li>
+<p>Memory: 32GB</p>
+</li>
+<li>
+<p>Disk: 2 x 300GB</p>
+</li>
+<li>
+<p>Network: 2 x 10G ports</p>
+</li>
+</ul>
+<p><strong>Compute -- 730 with RAID 5</strong></p>
+<ul>
+<li>
+<p>CPU: 2</p>
+</li>
+<li>
+<p>Cores: 12</p>
+</li>
+<li>
+<p>Memory: 128GB</p>
+</li>
+<li>
+<p>Disk: 2 X 600GB</p>
+</li>
+<li>
+<p>Network: 4 x 10G ports</p>
+</li>
+</ul>
+<p><strong>Storage -- 730 with RAID 5</strong></p>
+<ul>
+<li>
+<p>CPU: 2</p>
+</li>
+<li>
+<p>Cores: 12</p>
+</li>
+<li>
+<p>Memory: 64GB</p>
+</li>
+<li>
+<p>Disk: 2 x 500GB, 24 x 600GB</p>
+</li>
+<li>
+<p>Raid Controller: PERC H710P Integrated RAID Controller, 1 GB NV
+    Cache</p>
+</li>
+<li>
+<p>Network: 2 x 10G ports</p>
+</li>
+</ul>
+<p><strong>Network -- 710B with RAID 5</strong></p>
+<ul>
+<li>
+<p>CPU: 1</p>
+</li>
+<li>
+<p>Cores: 6</p>
+</li>
+<li>
+<p>Memory: 32GB</p>
+</li>
+<li>
+<p>Disk: 2 x 500GB</p>
+</li>
+<li>
+<p>Network: 5 x 10G ports</p>
+</li>
+</ul>
+<p><strong>Total</strong></p>
+<ul>
+<li>
+<p>CPU: 7 → 8</p>
+</li>
+<li>
+<p>Cores: 42 → 72</p>
+</li>
+<li>
+<p>Memory: 256GB →?</p>
+</li>
+<li>
+<p>Disk: 14.4GB → 28.8TB</p>
+</li>
+<li>
+<p>Network: 13 x 10G ports →12 ports</p>
+</li>
+</ul>
+<h1 id="3-node-architecture-figures">3 Node Architecture Figures</h1>
+<p><a href="https://docs.redhat.com/en/documentation/red_hat_openstack_platform/10/html/recommendations_for_large_deployments/recommended-specifications#overcloud-compute-nodes">Chapter 2. Recommended specifications | Red Hat Product
+Documentation</a></p>
+<p><a href="https://docs.oracle.com/cd/E36784_01/html/E54155/archover.html">Three-Node Architecture Overview - Installing and Configuring OpenStack
+in Oracle® Solaris
+11.2</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js"></script>
+        <script src="../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
