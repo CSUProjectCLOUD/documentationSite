@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>SPIKE   OpenStack Architecture and Analysis - Project CLOUD</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SPIKE   OpenStack Architecture and Analysis";
+        var mkdocs_page_input_path = "General/Engineering Documentation/POCs and SPIKEs/SPIKE - OpenStack Architecture and Analysis.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> Project CLOUD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Project CLOUD Documentation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../DevStackInstallation/">Installing DevStack</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../Documentation%20Site%20Documentation/">Documentation Site Documentation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../KnownIssues/">Known Issues</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../Overview/">Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../Storage%20Configuration/">Storage Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../TODOs%20-%20Table%20of%20Contents/">TODOs - Table of Contents</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../Table%20of%20Contents/">Table of Contents</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../Troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">DevStack Proof of Concept</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../DevStack%20Proof%20of%20Concept/DevStack%20Bugs/">Bugs in DevStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../DevStack%20Proof%20of%20Concept/DevStack%20Installation/">Installing DevStack</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">General</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Kubernetes%20Research/">Kubernetes Research</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Mini%20Charter%20%28Private%20Cloud%20Server%29/">Mini Charter (Private Cloud Server)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../charter%20scratchpad/">Charter scratchpad</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Engineering Documentation</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../Server%20Port%20Address%20Allocation/">Server Port Address Allocation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Configuration and Installation Docs</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Configuration%20and%20Installation%20Docs/DevStack_noHostsMapped/">DevStack noHostsMapped</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Configuration%20and%20Installation%20Docs/Kubernetes%20Research/">Kubernetes Research</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Configuration%20and%20Installation%20Docs/Raid%20Discussion/">Power Edge Specs</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" >POCs and SPIKEs</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../Proof%20of%20Concept/">Proof of Concept</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../Raid%20Reassessment/">RAID REASSESSMENT</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">SPIKE   OpenStack Architecture and Analysis</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Networking Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Networking%20Setup/Navigating%20Configuration%20Files/">Navigating Configuration Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >CDG Network Configurations</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Networking%20Setup/CDG%20Network%20Configurations/Cisco%20Switch%20First%20Time%20Setup/">First Time Configurations in CLI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Networking%20Setup/CDG%20Network%20Configurations/Connecting%20Servers%20to%20Switch%20VLAN/">Connecting Servers to VLAN</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Networking%20Setup/CDG%20Network%20Configurations/Internet%20Access%20via%20Wall%20Port/">Internet Access via Wall Port</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Networking%20Setup/CDG%20Network%20Configurations/Reading%20Serial%20Data%20on%20Cisco%20Switch%20with%20Windows%2011%20PC/">Reading Serial Data on Cisco Switch with Windows 11</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Networking%20Setup/CDG%20Network%20Configurations/VLAN%20Configuration/">VLAN Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >CDG Network Info</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Networking%20Setup/CDG%20Network%20Info/Cisco%20Switch%20IP%20and%20MAC%20Addresses/">IP and MAC Addresses of Cisco Switch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Networking%20Setup/CDG%20Network%20Info/Dell%20Server%20MAC%20Addresses/">MAC Addresses</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Server Operating System</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20Operating%20System/KVM%20Installation/">Installing KVM R710 &amp; 730</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20Operating%20System/Operating%20System%20Installation/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20Operating%20System/SSH/">SSH Installation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Server Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20Setup/PowerRack%20Wiring/">Power Edge Wiring Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20Setup/RAID%20Config/">Configuring RAID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20Setup/kolla-anisble%20doc/">Kolla anisble doc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Server iDRAC</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20iDRAC/Adjusting%20iDRAC6%20basic%20config/">Adjusting iDRAC6 basic config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20iDRAC/IP%20Address%20Setup%20for%20R710/">IP Address Setup for R710</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20iDRAC/IP%20Address%20Setup%20for%20R730/">IP Address Setup for R730</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../Server%20iDRAC/iDRAC%20config/">iDRAC config</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">System Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../System%20Architecture/Hardware%20Inventory/">Hardware Inventory</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">Project CLOUD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">General</li>
+          <li class="breadcrumb-item">Engineering Documentation</li>
+          <li class="breadcrumb-item">POCs and SPIKEs</li>
+      <li class="breadcrumb-item active">SPIKE   OpenStack Architecture and Analysis</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/General/Engineering Documentation/POCs and SPIKEs/SPIKE - OpenStack Architecture and Analysis.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><strong>SPIKE: OpenStack Architecture and Analysis</strong></p>
+<p><a href="#objective-statement">Objective Statement 1</a></p>
+<p><a href="#openstack-components-introduction">OpenStack Components Introduction
+1</a></p>
+<p><a href="#primary-components">Primary Components 1</a></p>
+<p><a href="#ironic">Ironic 1</a></p>
+<p><a href="#nova">Nova 1</a></p>
+<p><a href="#glance">Glance 1</a></p>
+<p><a href="#neutron">Neutron 1</a></p>
+<p><a href="#other">Other 1</a></p>
+<p><a href="#download-options">Download Options 1</a></p>
+<p><a href="#evaluation-tools">Evaluation Tools 1</a></p>
+<p><a href="#devstack">DevStack 1</a></p>
+<p><a href="#microstack">MicroStack 2</a></p>
+<p><a href="#ansible">Ansible 2</a></p>
+<p><a href="#juju">Juju 2</a></p>
+<p><a href="#other-1">Other 2</a></p>
+<p><a href="#architecture">Architecture 2</a></p>
+<p><a href="#known-pre-requirements">Known Pre-requirements 3</a></p>
+<p><a href="#next-steps-and-closing-remarks">Next Steps and Closing Remarks 4</a></p>
+<p><a href="#optional-route-of-3-cycles">Optional Route of 3 Cycles 4</a></p>
+<p><a href="#future-work-epics">Future Work 4</a></p>
+<p><a href="#potential-stories">Potential Stories 4</a></p>
+<p><a href="#sources">Sources 5</a></p>
+<h1 id="objective-statement">Objective Statement</h1>
+<p>With this spike, we should be able to grasp the concepts of OpenStack
+and understand its services, be able to identify viable download and
+configuration tools, have a well crafted architecture model either using
+a professionally made example or self-made model, discern a list of
+pre-needed requirements and work items needed prior to the download of
+OpenStack with an overall address to the next steps after this spike.</p>
+<h1 id="openstack-components-introduction">OpenStack Components Introduction</h1>
+<h2 id="primary-components">Primary Components</h2>
+<h4 id="ironic">Ironic</h4>
+<p>Will be what we use to provision and manage our Dell Power Edge
+machines. Uses PXE</p>
+<p>This will interact with OpenStack Compute (nova), Identity (keystone),
+Image service (glance), and Networking (neutron)</p>
+<h4 id="nova">Nova</h4>
+<h4 id="glance">Glance</h4>
+<p>-</p>
+<h4 id="neutron">Neutron</h4>
+<p>-</p>
+<h4 id="keystone">Keystone</h4>
+<h4 id="-">-</h4>
+<h2 id="other">Other</h2>
+<h1 id="download-options">Download Options</h1>
+<h2 id="evaluation-tools">Evaluation Tools</h2>
+<h4 id="devstack">DevStack</h4>
+<ul>
+<li>
+<p>Will make major changes to a system and should only be run on VM's
+    dedicated for this purpose.</p>
+</li>
+<li>
+<p>Official Evaluation tool</p>
+</li>
+<li>
+<p>Used for training, proof-of-concept and personal education. Not for
+    production deployment, meant for developing and testing OpenStack
+    itself.</p>
+</li>
+</ul>
+<p>[Example Case:]{.underline} If we want to make changes to OpenStack,
+it'll be a terrible idea to go and do this on PROD. With DevStack, we
+can make those changes to an environment that is close to the deployed
+OpenStack instance and verify it works there before making changes to
+production.</p>
+<h4 id="microstack">MicroStack</h4>
+<p>Can be set up very quickly and installation is viewed as being easier
+than DevStack. Looks like a good choice as well and worth taking a
+further look at.</p>
+<h2 id="devops-deployment">DevOps Deployment</h2>
+<h4 id="ansible">Ansible</h4>
+<p><strong>Kolla Ansible</strong></p>
+<ul>
+<li>
+<p>Uses Docker containers to deploy OpenStack</p>
+</li>
+<li>
+<p>Minimum Requirements:</p>
+<ul>
+<li>
+<p>2 network interfaces</p>
+</li>
+<li>
+<p>8GB main memory</p>
+</li>
+<li>
+<p>40GB disk space</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>OpenStack Ansible</strong></p>
+<ul>
+<li>
+<p>Uses LXC containers to deploy OpenStack</p>
+</li>
+<li>
+<p>Minimum Requirements:</p>
+<ul>
+<li>
+<p>Multicore processors</p>
+</li>
+<li>
+<p>10 GB for OpenStack-Ansible repository</p>
+</li>
+<li>
+<p>100 GB of disk space for Control Plane</p>
+</li>
+<li>
+<p>1/10GB Ethernet</p>
+</li>
+<li>
+<p>Bonded Network interfaces</p>
+</li>
+<li>
+<p>VLAN offloading</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Ansible is less opinionated on how we should deploy OpenStack, more
+flexible, provides defaults to get started, and provides additional
+optimization past initial setup. However Kolla Ansible states that it is
+highly opinionated. 'Kolla Ansible is highly opinionated out of the box,
+but allows for complete customization.' Kolla-ansible looks to be more
+supported and has more frequent upgrades.</p>
+<h4 id="juju">Juju</h4>
+<p>Open source orchestration engine</p>
+<p>If we use Juju, can deploy using Charmed OpenStack, integrates well with
+Metal-As-A-Service. Will look more into this later. Is this same as
+IAAS?</p>
+<h4 id="other_1">Other</h4>
+<p><strong>Puppet, Chef, Salt</strong></p>
+<p>Older. Not the best for long term deployment.</p>
+<h1 id="architecture">Architecture</h1>
+<p>Will stick to the basics Horizon, Swift, Glance, Nova, Cinder, Neutron,
+&amp; Keystone. Official recommended architecture for an OpenStack VPC
+design is located on the OpenStack
+<a href="https://docs.openstack.org/arch-design/design.html">Design</a> page.</p>
+<h1 id="known-pre-requirements">Known Pre-requirements</h1>
+<ul>
+<li>
+<p>Debian</p>
+<ul>
+<li>Debian 12 (bookworm)</li>
+</ul>
+</li>
+<li>
+<p>Ubuntu</p>
+<ul>
+<li>
+<p>Ubuntu 22.04 LTS (Jammy Jellyfish)</p>
+</li>
+<li>
+<p>Ubuntu 24.04 LTS (Noble Numbat)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CentOS based</p>
+<ul>
+<li>
+<p>CentOS Stream 9</p>
+</li>
+<li>
+<p>Rocky Linux 9</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Secure Shell (SSH) client and server that support public key
+    authentication</p>
+</li>
+<li>
+<p>Python 3.8.*x* or 3.10.*x*</p>
+</li>
+<li>
+<p>en_US.UTF-8 as the locale</p>
+</li>
+<li>
+<p>At least 1/10 Gigabit Ethernet</p>
+</li>
+<li>
+<p>Jumbo Frames (Recommended)</p>
+</li>
+</ul>
+<p><strong>For Kolla-Ansible</strong></p>
+<ul>
+<li>
+<p>2 network interfaces</p>
+</li>
+<li>
+<p>8GB main memory</p>
+</li>
+<li>
+<p>40GB disk space</p>
+</li>
+</ul>
+<h1 id="next-steps-and-closing-remarks">Next Steps and Closing Remarks</h1>
+<p>Findings suggest to stick to the basics; Horizon, Swift, Glance, Nova,
+Cinder, &amp; Neutron for Cycle 2. The team can discuss on their thoughts
+and give a response Sprint 3. As for the basics listed, we will have 6
+weeks to complete them and be able to definetively define them as
+'DONE'. There are plenty of other services to add but we may not get the
+opportunity to add them.</p>
+<p>Below will also be a list of <strong>Epics</strong> and <strong>Stories</strong> needed. How we
+define these items as done and if there a possible more items needed
+that were missed will be discussed after presentation.</p>
+<h2 id="optional-route-of-3-cycles">Optional Route of 3 Cycles</h2>
+<p>Cycle 1: 2 Sprints (3wk/2wk) Primary Hardware Needs and Configs</p>
+<p>Cycle 2: 3 Sprints (2wk/2wk/2wk) General OpenStack Deployment and
+Secondary Hardware Needs</p>
+<p>Cycle 3: 2 Sprints (2wk/1wk) Secondary OpenStack Components and Wrap-up</p>
+<h2 id="future-work-epics">Future Work (Epics)</h2>
+<ul>
+<li>
+<p>Openstack Installation</p>
+</li>
+<li>
+<p>Horizon</p>
+</li>
+<li>
+<p>Neutron</p>
+</li>
+<li>
+<p>Glance</p>
+</li>
+<li>
+<p>Cinder</p>
+</li>
+<li>
+<p>Swift</p>
+</li>
+<li>
+<p>Nova</p>
+</li>
+<li>
+<p>Keystone</p>
+</li>
+</ul>
+<h2 id="potential-stories">Potential Stories</h2>
+<ul>
+<li>
+<p>Creating Jumbo Frames</p>
+</li>
+<li>
+<p>Server Clustering</p>
+</li>
+<li>
+<p>Addition of SSH</p>
+</li>
+<li>
+<p>Addition of Python 3.12.x (3.13 isn't a LTS system I believe)</p>
+</li>
+<li>
+<p>RAID cards configured</p>
+</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<p><a href="https://docs.openstack.org/project-deploy-guide/openstack-ansible/2024.2/index.html">OpenStack-Ansible Deployment Guide --- openstack-ansible 30.0.1.dev3
+documentation</a></p>
+<p><a href="https://docs.openstack.org/project-deploy-guide/openstack-ansible/latest/overview.html">Overview --- openstack-ansible 30.1.0.dev44
+documentation</a></p>
+<p><a href="https://docs.openstack.org/devstack/latest/">DevStack --- DevStack
+documentation</a></p>
+<p><a href="https://canonical.com/microstack/docs">MicroStack Documentation</a></p>
+<p><a href="https://www.youtube.com/watch?v=iIkWr_pzfLE">Deploying OpenStack in 2023 A Survey of Setting Up
+OpenStack</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Raid%20Reassessment/" class="btn btn-neutral float-left" title="RAID REASSESSMENT"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../../Networking%20Setup/Navigating%20Configuration%20Files/" class="btn btn-neutral float-right" title="Navigating Configuration Files">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/CSUProjectCLOUD/documentationSite" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Raid%20Reassessment/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../../Networking%20Setup/Navigating%20Configuration%20Files/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

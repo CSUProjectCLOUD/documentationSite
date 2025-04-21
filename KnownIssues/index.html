@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Installing DevStack - Project CLOUD</title>
+    <title>Known Issues - Project CLOUD</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Installing DevStack";
-        var mkdocs_page_input_path = "DevStackInstallation.md";
+        var mkdocs_page_name = "Known Issues";
+        var mkdocs_page_input_path = "KnownIssues.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -43,38 +43,20 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Project CLOUD Documentation</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installing DevStack</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#objectives">Objectives</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#background">Background</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#create-a-localconf">Create a local.conf</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#start-the-install">Start the install</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#verification">Verification</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#accessing-dashboard">Accessing Dashboard</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DevStackInstallation/">Installing DevStack</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../Documentation%20Site%20Documentation/">Documentation Site Documentation</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../KnownIssues/">Known Issues</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Known Issues</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#devstack">Devstack</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -214,9 +196,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Installing DevStack</li>
+      <li class="breadcrumb-item active">Known Issues</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/DevStackInstallation.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/KnownIssues.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -224,107 +206,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="installing-devstack">Installing DevStack</h1>
-<h2 id="objectives">Objectives</h2>
+                <h1 id="known-issues">Known Issues</h1>
+<h2 id="devstack">Devstack</h2>
+<p>Occasionally, you can run into issues with running Devstack. Oftentimes, this can be remedied by running the following commands in order:</p>
 <ul>
 <li>
 <blockquote>
-<p>Use DevStack to install OpenStack</p>
+<p>./unstack.sh</p>
 </blockquote>
 </li>
 <li>
 <blockquote>
-<p>Successfully interact with OpenStack via CLI</p>
+<p>./clean.sh</p>
 </blockquote>
 </li>
 <li>
 <blockquote>
-<p>Successfully interact with OpenStack via Horizon Web UI</p>
+<p>./stack.sh</p>
 </blockquote>
 </li>
 </ul>
-<p>Notes and other details blah</p>
-<h2 id="background">Background</h2>
-<p>DevStack is a set of scripts which can be used to quickly set up an
-OpenStack environment.</p>
-<p>A DevStack-based environment is used for testing and development and
-should <strong>not</strong> be your final cloud’s basis.</p>
-<p>DevStack is very useful for testing to see whether your hardware can run
-OpenStack.</p>
-<p>Note that, like the rest of this project, a good understanding of Linux
-will be invaluable for saving you time, effort, and confusion.
-<a href="https://linuxupskillchallenge.com/">https://linuxupskillchallenge.com/</a> looks like a useful resource for
-the knowledge you’ll need here. Set up an Ubuntu Server VM and mess with
-it.</p>
-<p>The information in this document is heavily referenced from the official
-DevStack installation guide:
-https://docs.openstack.org/devstack/latest/index.html</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<p>Make sure you are in the devstack directory before running these commands. </p>
+<p>If you run stack.sh and, upon loading into the Horizon dashboard, you are greeted with the Apache Default Page instead of the Openstack login, run the following command on the server.</p>
 <ul>
 <li>
-<p>Fresh Ubuntu Server 24.04 installation</p>
-</li>
-<li>
-<p>Internet connection for server</p>
+<blockquote>
+<p>service apache2 reload</p>
+</blockquote>
 </li>
 </ul>
-<h2 id="installation">Installation</h2>
-<h3 id="setup">Setup</h3>
-<p>First we’ll add a stack user to run DevStack.</p>
-<p>The following commands will create the user, give it executable
-permissions in all cases, and add it to the list of sudoers.</p>
-<p>$ sudo useradd –s /bin/bash -d /opt/stack -m stack</p>
-<p>$ sudo chmod +x /opt/stack</p>
-<p>$ echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack<br />
-$ sudo -u stack –i</p>
-<p>Next, we’ll download DevStack by cloning its Git repository.</p>
-<p>$ git clone <a href="https://opendev.org/openstack/devstack">https://opendev.org/openstack/devstack</a></p>
-<p>$ cd devstack</p>
-<h3 id="create-a-localconf">Create a local.conf</h3>
-<p>Passwords for the OpenStack installation are stored in the file
-local.conf. Open the file with your text editor of choice:</p>
-<p>$ nano local.conf</p>
-<p>Enter the following in the file:</p>
-<p>[[local|localrc]]</p>
-<p>ADMIN_PASSWORD=secret</p>
-<p>DATABASE_PASSWORD=$ADMIN_PASSWORD</p>
-<p>RABBIT_PASSWORD=$ADMIN_PASSWORD</p>
-<p>SERVICE_PASSWORD=$ADMIN_PASSWORD</p>
-<p>Change ‘secret’ in the configuration above to the alphanumeric password
-of choice. We used 0990. You should use something more secure.</p>
-<h3 id="start-the-install">Start the install</h3>
-<p>Now, you should be ready to install DevStack.</p>
-<p>You should still be in \~/devstack. If not, get there.</p>
-<p>Run the following to start the DevStack scripts:</p>
-<p>$ ./stack.sh</p>
-<p>DevStack will install without further input. Their documentation claims
-this will take 15-30 minutes. In our experience, the installation could
-easily take around an hour. Use that time to read up on Linux commands,
-touch grass, or call your mom.</p>
-<h3 id="verification">Verification</h3>
-<p>At last, DevStack has executed every last script, and you’ve been handed
-back control of the server. Time to see if it worked.</p>
-<p>First, check if OpenStack is up and running. You will still need to be
-in the devstack directory.</p>
-<p>$ source openrc admin admin</p>
-<p>$ openstack user list</p>
-<p>$ openstack image list</p>
-<p>$ openstack server list</p>
-<p>$ openstack service list</p>
-<p>$ openstack network list</p>
-<h3 id="accessing-dashboard">Accessing Dashboard</h3>
-<p>Now, we’ll go to Horizon and try setting up an instance.</p>
-<p>Enter the server’s IP address in your browser.</p>
-<p>This should bring you to an OpenStack login page.</p>
-<p><strong>User:</strong> admin or demo<br />
-<strong>Password:</strong> secret defined in local.conf file earlier</p>
-<p>Finished</p>
+<p>If this does not fix it, refresh the cache on your browser or open the dashboard in a private window. If it still does not fix, attempt the following commands in this order:</p>
+<ul>
+<li>
+<blockquote>
+<p>sudo a2dissite 000-default.conf</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>systemctl reload apache2</p>
+</blockquote>
+</li>
+</ul>
+<p>If you get the error that hosts are not mapped to any cell when attempting to stack or create an instance, run the following command on the server.</p>
+<ul>
+<li>
+<blockquote>
+<p>sudo nova-manage cell_v2 discover_hosts -verbose</p>
+</blockquote>
+</li>
+</ul>
+<p>If you have errors related to authentication when attempting to run any of the above commands, log into the Horzion dashboard on a separate device. Then, go to the top right where it shows the profile you are logged in on. It should say "Openstack RC File". Make sure you are logged into the admin account, and download this file. Transfer it to a USB drive and copy it to the Devstack directory on the server, then run the following command:</p>
+<p>-&gt; source openrc</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Project CLOUD Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Documentation%20Site%20Documentation/" class="btn btn-neutral float-right" title="Documentation Site Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Documentation%20Site%20Documentation/" class="btn btn-neutral float-left" title="Documentation Site Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -351,10 +290,10 @@ in the devstack directory.</p>
         </span>
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Documentation%20Site%20Documentation/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Documentation%20Site%20Documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Overview/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Installing DevStack - Project CLOUD</title>
+    <title>Documentation Site Documentation - Project CLOUD</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Installing DevStack";
-        var mkdocs_page_input_path = "DevStackInstallation.md";
+        var mkdocs_page_name = "Documentation Site Documentation";
+        var mkdocs_page_input_path = "Documentation Site Documentation.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -43,34 +43,22 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Project CLOUD Documentation</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DevStackInstallation/">Installing DevStack</a>
+                </li>
+              </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installing DevStack</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Documentation Site Documentation</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#objectives">Objectives</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#background">Background</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    <li class="toctree-l2"><a class="reference internal" href="#preparation">Preparation</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#create-a-localconf">Create a local.conf</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#start-the-install">Start the install</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#verification">Verification</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#accessing-dashboard">Accessing Dashboard</a>
+    <li class="toctree-l3"><a class="reference internal" href="#conversions">Conversions</a>
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#theme">Theme</a>
+    </li>
     </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../Documentation%20Site%20Documentation/">Documentation Site Documentation</a>
                 </li>
               </ul>
               <ul>
@@ -214,9 +202,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Installing DevStack</li>
+      <li class="breadcrumb-item active">Documentation Site Documentation</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/DevStackInstallation.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/Documentation Site Documentation.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -224,107 +212,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="installing-devstack">Installing DevStack</h1>
-<h2 id="objectives">Objectives</h2>
-<ul>
-<li>
-<blockquote>
-<p>Use DevStack to install OpenStack</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>Successfully interact with OpenStack via CLI</p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>Successfully interact with OpenStack via Horizon Web UI</p>
-</blockquote>
-</li>
-</ul>
-<p>Notes and other details blah</p>
-<h2 id="background">Background</h2>
-<p>DevStack is a set of scripts which can be used to quickly set up an
-OpenStack environment.</p>
-<p>A DevStack-based environment is used for testing and development and
-should <strong>not</strong> be your final cloud’s basis.</p>
-<p>DevStack is very useful for testing to see whether your hardware can run
-OpenStack.</p>
-<p>Note that, like the rest of this project, a good understanding of Linux
-will be invaluable for saving you time, effort, and confusion.
-<a href="https://linuxupskillchallenge.com/">https://linuxupskillchallenge.com/</a> looks like a useful resource for
-the knowledge you’ll need here. Set up an Ubuntu Server VM and mess with
-it.</p>
-<p>The information in this document is heavily referenced from the official
-DevStack installation guide:
-https://docs.openstack.org/devstack/latest/index.html</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>
-<p>Fresh Ubuntu Server 24.04 installation</p>
-</li>
-<li>
-<p>Internet connection for server</p>
-</li>
-</ul>
-<h2 id="installation">Installation</h2>
-<h3 id="setup">Setup</h3>
-<p>First we’ll add a stack user to run DevStack.</p>
-<p>The following commands will create the user, give it executable
-permissions in all cases, and add it to the list of sudoers.</p>
-<p>$ sudo useradd –s /bin/bash -d /opt/stack -m stack</p>
-<p>$ sudo chmod +x /opt/stack</p>
-<p>$ echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack<br />
-$ sudo -u stack –i</p>
-<p>Next, we’ll download DevStack by cloning its Git repository.</p>
-<p>$ git clone <a href="https://opendev.org/openstack/devstack">https://opendev.org/openstack/devstack</a></p>
-<p>$ cd devstack</p>
-<h3 id="create-a-localconf">Create a local.conf</h3>
-<p>Passwords for the OpenStack installation are stored in the file
-local.conf. Open the file with your text editor of choice:</p>
-<p>$ nano local.conf</p>
-<p>Enter the following in the file:</p>
-<p>[[local|localrc]]</p>
-<p>ADMIN_PASSWORD=secret</p>
-<p>DATABASE_PASSWORD=$ADMIN_PASSWORD</p>
-<p>RABBIT_PASSWORD=$ADMIN_PASSWORD</p>
-<p>SERVICE_PASSWORD=$ADMIN_PASSWORD</p>
-<p>Change ‘secret’ in the configuration above to the alphanumeric password
-of choice. We used 0990. You should use something more secure.</p>
-<h3 id="start-the-install">Start the install</h3>
-<p>Now, you should be ready to install DevStack.</p>
-<p>You should still be in \~/devstack. If not, get there.</p>
-<p>Run the following to start the DevStack scripts:</p>
-<p>$ ./stack.sh</p>
-<p>DevStack will install without further input. Their documentation claims
-this will take 15-30 minutes. In our experience, the installation could
-easily take around an hour. Use that time to read up on Linux commands,
-touch grass, or call your mom.</p>
-<h3 id="verification">Verification</h3>
-<p>At last, DevStack has executed every last script, and you’ve been handed
-back control of the server. Time to see if it worked.</p>
-<p>First, check if OpenStack is up and running. You will still need to be
-in the devstack directory.</p>
-<p>$ source openrc admin admin</p>
-<p>$ openstack user list</p>
-<p>$ openstack image list</p>
-<p>$ openstack server list</p>
-<p>$ openstack service list</p>
-<p>$ openstack network list</p>
-<h3 id="accessing-dashboard">Accessing Dashboard</h3>
-<p>Now, we’ll go to Horizon and try setting up an instance.</p>
-<p>Enter the server’s IP address in your browser.</p>
-<p>This should bring you to an OpenStack login page.</p>
-<p><strong>User:</strong> admin or demo<br />
-<strong>Password:</strong> secret defined in local.conf file earlier</p>
-<p>Finished</p>
+                <h1 id="documentation-site-documentation">Documentation Site Documentation</h1>
+<p><strong>Author:</strong> Nick Miller</p>
+<p>This site was generated with <a href="https://www.mkdocs.org">MkDocs</a>, an open-source Python library for generating static documentation sites. It is hosted on GitHub Pages.</p>
+<p>Creation/implementation of the site was handled by Nick Miller. The documentation itself was written by all team members.</p>
+<p>MarkDown documents were written/formatted in VS Code with the markdownlint extension for consistency.</p>
+<h2 id="preparation">Preparation</h2>
+<p>Our documentation was originally written in Microsoft Word in Office 365. This caused a few problems.</p>
+<ol>
+<li>The original directory structure was difficult and slow to navigate.</li>
+<li>Team members will not have access to the Microsoft group after graduation.</li>
+<li>Access required manual addition to the group.</li>
+<li>The documents were not standardized by format or content.</li>
+</ol>
+<p>We decided to create this site in response to those issues. It is a fast, organized way to read our documentation.</p>
+<h3 id="conversions">Conversions</h3>
+<p>To convert our .docx files to .md, I used <a href="https://pandoc.org/">Pandoc</a>, a CLI tool that can convert between practically any document types. Future updates and additions to this documentation should start with MarkDown documents. For posterity, here's how I converted things.</p>
+<ol>
+<li>First, <a href="https://pandoc.org/installing.html">install Pandoc</a>. I got it from the Ubuntu repository.</li>
+<li>In your terminal, cd to the folder of your .docx file(s).</li>
+<li>Now we'll run Pandoc:</li>
+</ol>
+<pre><code class="language-console">pandoc --from docx --to markdown -o &lt;filename&gt;.md &lt;filename&gt;
+</code></pre>
+<p>The command above calls Pandoc, tells it to convert from .docx to .md, gives the destination file as \&lt;filename>.md, and tells it which file to convert.</p>
+<p>Note that this will look different in use. Say we have a file named servertest.docx to convert:</p>
+<pre><code class="language-console">pandoc --from docx --to markdown -o servertest.md servertest.docx
+</code></pre>
+<h2 id="theme">Theme</h2>
+<p>The site uses MkDoc's built-in theme ReadTheDocs, a clone of ReadTheDocs' layout. This theme was selected for readability in comparison to the default theme and ease of installation as a built-in theme. Material for MkDocs was also considered.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Project CLOUD Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Documentation%20Site%20Documentation/" class="btn btn-neutral float-right" title="Documentation Site Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../DevStackInstallation/" class="btn btn-neutral float-left" title="Installing DevStack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../KnownIssues/" class="btn btn-neutral float-right" title="Known Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -351,10 +273,10 @@ in the devstack directory.</p>
         </span>
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../DevStackInstallation/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Documentation%20Site%20Documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../KnownIssues/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
