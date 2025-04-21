@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>IP and MAC Addresses of Cisco Switch - Project CLOUD</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "IP and MAC Addresses of Cisco Switch";
+        var mkdocs_page_input_path = "Networking Setup/CDG Network Info/Cisco Switch IP and MAC Addresses.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Project CLOUD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Project CLOUD Documentation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../DevStackInstallation/">Installing DevStack</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Documentation%20Site%20Documentation/">Documentation Site Documentation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../KnownIssues/">Known Issues</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Overview/">Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Storage%20Configuration/">Storage Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../TODOs%20-%20Table%20of%20Contents/">TODOs - Table of Contents</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Table%20of%20Contents/">Table of Contents</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../Troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">DevStack Proof of Concept</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../DevStack%20Proof%20of%20Concept/DevStack%20Bugs/">Bugs in DevStack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../DevStack%20Proof%20of%20Concept/DevStack%20Installation/">Installing DevStack</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">General</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../General/Kubernetes%20Research/">Kubernetes Research</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../General/Mini%20Charter%20%28Private%20Cloud%20Server%29/">Mini Charter (Private Cloud Server)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../General/charter%20scratchpad/">Charter scratchpad</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Engineering Documentation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../General/Engineering%20Documentation/Server%20Port%20Address%20Allocation/">Server Port Address Allocation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Configuration and Installation Docs</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../General/Engineering%20Documentation/Configuration%20and%20Installation%20Docs/DevStack_noHostsMapped/">DevStack noHostsMapped</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../General/Engineering%20Documentation/Configuration%20and%20Installation%20Docs/Kubernetes%20Research/">Kubernetes Research</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../General/Engineering%20Documentation/Configuration%20and%20Installation%20Docs/Raid%20Discussion/">Power Edge Specs</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >POCs and SPIKEs</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../General/Engineering%20Documentation/POCs%20and%20SPIKEs/Proof%20of%20Concept/">Proof of Concept</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../General/Engineering%20Documentation/POCs%20and%20SPIKEs/Raid%20Reassessment/">RAID REASSESSMENT</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../General/Engineering%20Documentation/POCs%20and%20SPIKEs/SPIKE%20-%20OpenStack%20Architecture%20and%20Analysis/">SPIKE   OpenStack Architecture and Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Networking Setup</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../Navigating%20Configuration%20Files/">Navigating Configuration Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >CDG Network Configurations</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../CDG%20Network%20Configurations/Cisco%20Switch%20First%20Time%20Setup/">First Time Configurations in CLI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CDG%20Network%20Configurations/Connecting%20Servers%20to%20Switch%20VLAN/">Connecting Servers to VLAN</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CDG%20Network%20Configurations/Internet%20Access%20via%20Wall%20Port/">Internet Access via Wall Port</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CDG%20Network%20Configurations/Reading%20Serial%20Data%20on%20Cisco%20Switch%20with%20Windows%2011%20PC/">Reading Serial Data on Cisco Switch with Windows 11</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CDG%20Network%20Configurations/VLAN%20Configuration/">VLAN Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >CDG Network Info</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">IP and MAC Addresses of Cisco Switch</a>
+    <ul class="current">
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Dell%20Server%20MAC%20Addresses/">MAC Addresses</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Server Operating System</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20Operating%20System/KVM%20Installation/">Installing KVM R710 &amp; 730</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20Operating%20System/Operating%20System%20Installation/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20Operating%20System/SSH/">SSH Installation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Server Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20Setup/PowerRack%20Wiring/">Power Edge Wiring Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20Setup/RAID%20Config/">Configuring RAID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20Setup/kolla-anisble%20doc/">Kolla anisble doc</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Server iDRAC</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20iDRAC/Adjusting%20iDRAC6%20basic%20config/">Adjusting iDRAC6 basic config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20iDRAC/IP%20Address%20Setup%20for%20R710/">IP Address Setup for R710</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20iDRAC/IP%20Address%20Setup%20for%20R730/">IP Address Setup for R730</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Server%20iDRAC/iDRAC%20config/">iDRAC config</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">System Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../System%20Architecture/Hardware%20Inventory/">Hardware Inventory</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Project CLOUD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Networking Setup</li>
+          <li class="breadcrumb-item">CDG Network Info</li>
+      <li class="breadcrumb-item active">IP and MAC Addresses of Cisco Switch</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/Networking Setup/CDG Network Info/Cisco Switch IP and MAC Addresses.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ip-and-mac-addresses-of-cisco-switch">IP and MAC Addresses of Cisco Switch</h1>
+<p>switch1#sh int | i (.* line protocol is )|(.* address is)\
+Vlan1 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1240 (bia 84eb.ef6b.1240)\
+Internet address is 192.168.100.1/24</p>
+<p>Vlan2 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1241 (bia 84eb.ef6b.1241)</p>
+<p>Vlan11 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1242 (bia 84eb.ef6b.1242)\
+Internet address is 10.0.11.1/24</p>
+<p>Vlan21 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1243 (bia 84eb.ef6b.1243)\
+Internet address is 10.0.21.1/24</p>
+<p>Vlan31 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1244 (bia 84eb.ef6b.1244)\
+Internet address is 10.0.31.1/24</p>
+<p>Vlan41 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1245 (bia 84eb.ef6b.1245)\
+Internet address is 10.0.41.1/24</p>
+<p>Vlan51 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1246 (bia 84eb.ef6b.1246)\
+Internet address is 10.0.51.1/24</p>
+<p>Vlan61 is up, line protocol is down\
+Hardware is EtherSVI, address is 84eb.ef6b.1247 (bia 84eb.ef6b.1247)\
+Internet address is 10.0.61.1/24</p>
+<p>FastEthernet0 is administratively down, line protocol is down\
+Hardware is APM86XXX FastEthernet, address is 84eb.ef6b.1239 (bia
+84eb.ef6b.1239)</p>
+<p>GigabitEthernet1/0/1 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1201 (bia
+84eb.ef6b.1201)</p>
+<p>GigabitEthernet1/0/2 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1202 (bia
+84eb.ef6b.1202)</p>
+<p>GigabitEthernet1/0/3 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1203 (bia
+84eb.ef6b.1203)</p>
+<p>GigabitEthernet1/0/4 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1204 (bia
+84eb.ef6b.1204)</p>
+<p>GigabitEthernet1/0/5 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1205 (bia
+84eb.ef6b.1205)</p>
+<p>GigabitEthernet1/0/6 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1206 (bia
+84eb.ef6b.1206)</p>
+<p>GigabitEthernet1/0/7 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1207 (bia
+84eb.ef6b.1207)\
+GigabitEthernet1/0/8 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1208 (bia
+84eb.ef6b.1208)</p>
+<p>GigabitEthernet1/0/9 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1209 (bia
+84eb.ef6b.1209)\
+GigabitEthernet1/0/10 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.120a (bia
+84eb.ef6b.120a) GigabitEthernet1/0/11 is down, line protocol is down
+(notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.120b (bia
+84eb.ef6b.120b)\
+GigabitEthernet1/0/12 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.120c (bia
+84eb.ef6b.120c) GigabitEthernet1/0/13 is down, line protocol is down
+(notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.120d (bia
+84eb.ef6b.120d)\
+GigabitEthernet1/0/14 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.120e (bia
+84eb.ef6b.120e)</p>
+<p>GigabitEthernet1/0/15 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.120f (bia
+84eb.ef6b.120f)</p>
+<p>GigabitEthernet1/0/16 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1210 (bia
+84eb.ef6b.1210)</p>
+<p>GigabitEthernet1/0/17 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1211 (bia
+84eb.ef6b.1211)</p>
+<p>GigabitEthernet1/0/18 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1212 (bia
+84eb.ef6b.1212)</p>
+<p>GigabitEthernet1/0/19 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1213 (bia
+84eb.ef6b.1213)</p>
+<p>GigabitEthernet1/0/20 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1214 (bia
+84eb.ef6b.1214) GigabitEthernet1/0/21 is down, line protocol is down
+(notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1215 (bia
+84eb.ef6b.1215)</p>
+<p>GigabitEthernet1/0/22 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1216 (bia
+84eb.ef6b.1216)</p>
+<p>GigabitEthernet1/0/23 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1217 (bia
+84eb.ef6b.1217)</p>
+<p>GigabitEthernet1/0/24 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1218 (bia
+84eb.ef6b.1218)</p>
+<p>GigabitEthernet1/0/25 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1219 (bia
+84eb.ef6b.1219)</p>
+<p>GigabitEthernet1/0/26 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.121a (bia
+84eb.ef6b.121a)</p>
+<p>GigabitEthernet1/0/27 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.121b (bia
+84eb.ef6b.121b)</p>
+<p>GigabitEthernet1/0/28 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.121c (bia
+84eb.ef6b.121c)</p>
+<p>GigabitEthernet1/0/29 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.121d (bia
+84eb.ef6b.121d)</p>
+<p>GigabitEthernet1/0/30 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.121e (bia
+84eb.ef6b.121e)</p>
+<p>GigabitEthernet1/0/31 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.121f (bia
+84eb.ef6b.121f)</p>
+<p>GigabitEthernet1/0/32 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1220 (bia
+84eb.ef6b.1220)</p>
+<p>GigabitEthernet1/0/33 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1221 (bia
+84eb.ef6b.1221)</p>
+<p>GigabitEthernet1/0/34 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1222 (bia
+84eb.ef6b.1222)</p>
+<p>GigabitEthernet1/0/35 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1223 (bia
+84eb.ef6b.1223)</p>
+<p>GigabitEthernet1/0/36 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1224 (bia
+84eb.ef6b.1224)</p>
+<p>GigabitEthernet1/0/37 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1225 (bia
+84eb.ef6b.1225)</p>
+<p>GigabitEthernet1/0/38 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1226 (bia
+84eb.ef6b.1226)</p>
+<p>GigabitEthernet1/0/39 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1227 (bia
+84eb.ef6b.1227)</p>
+<p>GigabitEthernet1/0/40 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1228 (bia
+84eb.ef6b.1228)</p>
+<p>GigabitEthernet1/0/41 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1229 (bia
+84eb.ef6b.1229)</p>
+<p>GigabitEthernet1/0/42 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.122a (bia
+84eb.ef6b.122a)</p>
+<p>GigabitEthernet1/0/43 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.122b (bia
+84eb.ef6b.122b)</p>
+<p>GigabitEthernet1/0/44 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.122c (bia
+84eb.ef6b.122c)</p>
+<p>GigabitEthernet1/0/45 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.122d (bia
+84eb.ef6b.122d)</p>
+<p>GigabitEthernet1/0/46 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.122e (bia
+84eb.ef6b.122e)</p>
+<p>GigabitEthernet1/0/47 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.122f (bia
+84eb.ef6b.122f)</p>
+<p>GigabitEthernet1/0/48 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1230 (bia
+84eb.ef6b.1230)</p>
+<p>GigabitEthernet1/0/49 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1231 (bia
+84eb.ef6b.1231)</p>
+<p>GigabitEthernet1/0/50 is down, line protocol is down (notconnect)\
+Hardware is Gigabit Ethernet, address is 84eb.ef6b.1232 (bia
+84eb.ef6b.1232)</p>
+<p>TenGigabitEthernet1/0/1 is down, line protocol is down (notconnect)\
+Hardware is Ten Gigabit Ethernet, address is 84eb.ef6b.1233 (bia
+84eb.ef6b.1233)</p>
+<p>TenGigabitEthernet1/0/2 is down, line protocol is down (notconnect)\
+Hardware is Ten Gigabit Ethernet, address is 84eb.ef6b.1234 (bia
+84eb.ef6b.1234)</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../CDG%20Network%20Configurations/VLAN%20Configuration/" class="btn btn-neutral float-left" title="VLAN Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Dell%20Server%20MAC%20Addresses/" class="btn btn-neutral float-right" title="MAC Addresses">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/CSUProjectCLOUD/documentationSite" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../CDG%20Network%20Configurations/VLAN%20Configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Dell%20Server%20MAC%20Addresses/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
