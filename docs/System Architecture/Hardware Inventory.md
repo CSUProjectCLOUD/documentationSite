@@ -15,7 +15,7 @@ R710A serial number: 7TQ1TR1
 - > CPU: Intel Xeon E5-2660 @ 2.60GHz
 - > RAM: 384Gb (24 sticks of 16Gb each)
 - > PSU: 2 750W power supplies
-- > Storage: 27 TB over 8 drives
+- > Storage: 32 TB over 8 drives
 
 ## Miscellaneous
 
