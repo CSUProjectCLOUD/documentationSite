@@ -41,4 +41,30 @@ pandoc --from docx --to markdown -o servertest.md servertest.docx
 
 ## Theme
 
-The site uses MkDoc's built-in theme ReadTheDocs, a clone of ReadTheDocs' layout. This theme was selected for readability in comparison to the default theme and ease of installation as a built-in theme. Material for MkDocs was also considered.
+The site uses MkDoc's built-in theme ReadTheDocs, a clone of ReadTheDocs' layout. This theme was selected for readability in comparison to the default theme and ease of installation as a built-in theme. Material for MkDocs was also considered, but I wanted to avoid an unneccessary step for future maintainers.
+
+# Updating the Site
+
+*This section assumes that you have commit access to the site repository in the Cloudgineers GitHub organization.*
+
+Ensure that Python and Pip are installed on your system. Install MkDocs with Pip.
+
+Clone the GitHub repository and edit the documentation in your editor of choice.
+
+When it's time to deploy your updates, open a terminal in the root folder of the repository.
+
+Run the MkDocs command gh-deploy and MkDocs will commit your changes to the repository, rebuild the site, and redeploy the site using a Github Action. That's all you need to do!
+
+```console
+pip install mkdocs
+
+# Clone and edit as desired...
+
+# Navigate to the repo directory
+# cd ~/your/computer/documentationSite for example
+
+# Run gh-deploy
+mkdocs gh-deploy
+```
+
+[MkDocs Page on Deploying Docs](https://www.mkdocs.org/user-guide/deploying-your-docs/)
