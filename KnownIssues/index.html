@@ -179,7 +179,11 @@
               </ul>
               <p class="caption"><span class="caption-text">System Architecture</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../System%20Architecture/Devstack%20vs%20Production/">Devstack vs Production</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../System%20Architecture/Hardware%20Inventory/">Hardware Inventory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../System%20Architecture/Logical%20Architecture/">Logical Architecture</a>
                   </li>
               </ul>
       </div>
@@ -226,7 +230,7 @@
 </blockquote>
 </li>
 </ul>
-<p>Make sure you are in the devstack directory before running these commands. </p>
+<p>Make sure you are in the devstack directory before running these commands.</p>
 <p>If you run stack.sh and, upon loading into the Horizon dashboard, you are greeted with the Apache Default Page instead of the Openstack login, run the following command on the server.</p>
 <ul>
 <li>
@@ -256,8 +260,14 @@
 </blockquote>
 </li>
 </ul>
-<p>If you have errors related to authentication when attempting to run any of the above commands, log into the Horzion dashboard on a separate device. Then, go to the top right where it shows the profile you are logged in on. It should say "Openstack RC File". Make sure you are logged into the admin account, and download this file. Transfer it to a USB drive and copy it to the Devstack directory on the server, then run the following command:</p>
-<p>-&gt; source openrc</p>
+<p>If you have errors related to authentication when attempting to run any of the above commands, log into the Horzion dashboard on a separate device. Then, go to the top right where it shows the profile you are logged in on. Click, and it should say "Openstack RC File". Make sure you are logged into the admin account, and download this file. Transfer it to a USB drive and copy it to the Devstack directory on the server, then run the following command:</p>
+<ul>
+<li>
+<blockquote>
+<p>source openrc</p>
+</blockquote>
+</li>
+</ul>
               
             </div>
           </div><footer>

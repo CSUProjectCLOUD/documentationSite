@@ -185,7 +185,11 @@
               </ul>
               <p class="caption"><span class="caption-text">System Architecture</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../System%20Architecture/Devstack%20vs%20Production/">Devstack vs Production</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../System%20Architecture/Hardware%20Inventory/">Hardware Inventory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../System%20Architecture/Logical%20Architecture/">Logical Architecture</a>
                   </li>
               </ul>
       </div>
@@ -235,12 +239,29 @@
 </ol>
 <pre><code class="language-console">pandoc --from docx --to markdown -o &lt;filename&gt;.md &lt;filename&gt;
 </code></pre>
-<p>The command above calls Pandoc, tells it to convert from .docx to .md, gives the destination file as \&lt;filename>.md, and tells it which file to convert.</p>
+<p>The command above calls Pandoc, tells it to convert from .docx to .md, gives the destination file as \&lt;filename&gt;.md, and tells it which file to convert.</p>
 <p>Note that this will look different in use. Say we have a file named servertest.docx to convert:</p>
 <pre><code class="language-console">pandoc --from docx --to markdown -o servertest.md servertest.docx
 </code></pre>
 <h2 id="theme">Theme</h2>
-<p>The site uses MkDoc's built-in theme ReadTheDocs, a clone of ReadTheDocs' layout. This theme was selected for readability in comparison to the default theme and ease of installation as a built-in theme. Material for MkDocs was also considered.</p>
+<p>The site uses MkDoc's built-in theme ReadTheDocs, a clone of ReadTheDocs' layout. This theme was selected for readability in comparison to the default theme and ease of installation as a built-in theme. Material for MkDocs was also considered, but I wanted to avoid an unneccessary step for future maintainers.</p>
+<h1 id="updating-the-site">Updating the Site</h1>
+<p><em>This section assumes that you have commit access to the site repository in the Cloudgineers GitHub organization.</em></p>
+<p>Ensure that Python and Pip are installed on your system. Install MkDocs with Pip.</p>
+<p>Clone the GitHub repository and edit the documentation in your editor of choice.</p>
+<p>When it's time to deploy your updates, open a terminal in the root folder of the repository.</p>
+<p>Run the command gh-deploy and MkDocs will commit your changes to the repository, rebuild the site, and redeploy the site using a Github Action. That's all you need to do!</p>
+<pre><code class="language-console">pip install mkdocs
+
+# Clone and edit as desired...
+
+# Navigate to the repo directory
+# cd ~/your/computer/documentationSite for example
+
+# Run gh-deploy
+gh-deploy
+</code></pre>
+<p>(MkDocs Page on Deploying Docs)[https://www.mkdocs.org/user-guide/deploying-your-docs/]</p>
               
             </div>
           </div><footer>

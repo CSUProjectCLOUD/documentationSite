@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>IP Address Setup for R710 - Project CLOUD</title>
+    <title>Logical Architecture - Project CLOUD</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "IP Address Setup for R710";
-        var mkdocs_page_input_path = "Server iDRAC/IP Address Setup for R710.md";
+        var mkdocs_page_name = "Logical Architecture";
+        var mkdocs_page_input_path = "System Architecture/Logical Architecture.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -163,23 +163,27 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Server iDRAC</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Adjusting%20iDRAC6%20basic%20config/">Adjusting iDRAC6 basic config</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Server%20iDRAC/Adjusting%20iDRAC6%20basic%20config/">Adjusting iDRAC6 basic config</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">IP Address Setup for R710</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Server%20iDRAC/IP%20Address%20Setup%20for%20R710/">IP Address Setup for R710</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../IP%20Address%20Setup%20for%20R730/">IP Address Setup for R730</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Server%20iDRAC/IP%20Address%20Setup%20for%20R730/">IP Address Setup for R730</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../iDRAC%20config/">iDRAC config</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Server%20iDRAC/iDRAC%20config/">iDRAC config</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">System Architecture</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../System%20Architecture/Devstack%20vs%20Production/">Devstack vs Production</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Devstack%20vs%20Production/">Devstack vs Production</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../System%20Architecture/Hardware%20Inventory/">Hardware Inventory</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hardware%20Inventory/">Hardware Inventory</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../System%20Architecture/Logical%20Architecture/">Logical Architecture</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Logical Architecture</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#to-be-completed">To be completed</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -196,10 +200,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Server iDRAC</li>
-      <li class="breadcrumb-item active">IP Address Setup for R710</li>
+          <li class="breadcrumb-item">System Architecture</li>
+      <li class="breadcrumb-item active">Logical Architecture</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/Server iDRAC/IP Address Setup for R710.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/CSUProjectCLOUD/documentationSite/edit/master/docs/System Architecture/Logical Architecture.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -207,155 +211,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p><strong>Authors:</strong> Jaden Jefferson</p>
-<p><strong>Last Updated:</strong> Jan 30 2025</p>
-<p>IP Address Setup for R710</p>
-<p>This was done in Lifecycle Controller version 1.5. Read-only mode will
-be marked in a light-blue font color.</p>
-<ol>
-<li>
-<p>On boot, click \&lt;Ctrl&gt;-\&lt;E&gt;</p>
-</li>
-<li>
-<p><strong>iDRAC LAN</strong> On</p>
-</li>
-<li>
-<p><strong>IPMI Over LAN</strong> On</p>
-</li>
-<li>
-<p>LAN Parameters</p>
-</li>
-<li>
-<p><strong>NIC Selection</strong> Dedicated</p>
-</li>
-<li>
-<p><strong>Active LOM</strong> No Active LOM</p>
-</li>
-<li>
-<p><strong>MAC ADDRESS:</strong> Should be in read-only mode</p>
-</li>
-<li>
-<p><strong>VLAN</strong> Enable Off</p>
-</li>
-<li>
-<p><strong>VLAN</strong> 0001</p>
-</li>
-<li>
-<p><strong>VLAN Priority</strong> Priority 0</p>
-</li>
-<li>
-<p><strong>Register iDRAC Name</strong> On</p>
-</li>
-<li>
-<p><strong>iDRAC Name</strong>: Should've be entered prior</p>
-</li>
-<li>
-<p><strong>Domain Name</strong> from DHCP Off</p>
-</li>
-<li>
-<p><strong>Domain Name:</strong> Will be given once</p>
-</li>
-<li>
-<p><strong>Host Name String:</strong> Not inserted</p>
-</li>
-<li>
-<p><strong>LAN Alert</strong> Enabled Off</p>
-</li>
-<li>
-<p><strong>Alert Policy Entry 1</strong> Disabled</p>
-</li>
-<li>
-<p><strong>Alert Destination</strong> 1 0.0.0.0</p>
-</li>
-</ol>
-<blockquote>
-<p>IPv4 Settings</p>
-</blockquote>
-<ul>
-<li>
-<p><strong>IPv4</strong> Enabled</p>
-</li>
-<li>
-<p><strong>RMCP+ Encryption Key:</strong> Not inserted</p>
-</li>
-<li>
-<p><strong>IPv4 Address Source:</strong> Static Must be static to insert Address,
-    Subnet Mask, &amp; Default Gateway. Once inserted, switch back to DHCP
-    to turn <strong>DNS Servers from DHCP</strong> On</p>
-</li>
-<li>
-<p><strong>DNS Server 1 &amp; 2</strong>: Read-only mode</p>
-</li>
-</ul>
-<blockquote>
-<p>IPv6 Settings</p>
-</blockquote>
-<ul>
-<li>
-<p><strong>IPv6</strong> Enabled</p>
-</li>
-<li>
-<p><strong>IPv6 Address Source</strong> AutoConfig</p>
-</li>
-<li>
-<p><strong>IPv6 Address 1:</strong> fd12:3456:789a:1::1</p>
-</li>
-<li>
-<p><strong>Prefix Length:</strong> 255 or 64</p>
-</li>
-<li>
-<p><strong>Default Gateway:</strong> f380::1</p>
-</li>
-<li>
-<p><strong>IPv6 Link-local Address:</strong> .fe80:b283:feff:fee8:f3be</p>
-</li>
-<li>
-<p><strong>IPv6 Address 2:</strong> ::</p>
-</li>
-<li>
-<p><strong>DNS Servers from DHCP</strong> On</p>
-</li>
-<li>
-<p><strong>DNS Server 1 &amp; 2:</strong> Read-only mode</p>
-</li>
-</ul>
-<blockquote>
-<p>Advanced LAN Configurations</p>
-</blockquote>
-<ul>
-<li>
-<p><strong>Auto-Negotiate</strong> Enabled</p>
-</li>
-<li>
-<p><strong>LAN Speed Setting</strong> 100Mbps</p>
-</li>
-<li>
-<p><strong>LAN Duplex Setting</strong> Full Duplex</p>
-</li>
-<li>
-<p>Exit out of iDRAC6. On exit select: Save Changes and Exit.</p>
-</li>
-<li>
-<p>Re-boot and confirm</p>
-</li>
-</ul>
-<blockquote>
-<p>Confirmation:</p>
-</blockquote>
-<ul>
-<li>
-<p>Should see DNS Name on reboot in same location.</p>
-</li>
-<li>
-<p>On reboot screen, you should see IP Address and DHCP</p>
-</li>
-</ul>
+                <h1 id="logical-architecture">Logical Architecture</h1>
+<h2 id="to-be-completed">To be completed</h2>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Adjusting%20iDRAC6%20basic%20config/" class="btn btn-neutral float-left" title="Adjusting iDRAC6 basic config"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../IP%20Address%20Setup%20for%20R730/" class="btn btn-neutral float-right" title="IP Address Setup for R730">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Hardware%20Inventory/" class="btn btn-neutral float-left" title="Hardware Inventory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -382,10 +244,8 @@ be marked in a light-blue font color.</p>
         </span>
     
     
-      <span><a href="../Adjusting%20iDRAC6%20basic%20config/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Hardware%20Inventory/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../IP%20Address%20Setup%20for%20R730/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
