@@ -21,7 +21,7 @@ Beyond my academic pursuits, I am driven by curiosity and a desire to explore cu
 
 **Jaden Jefferson** bio.
 
-**Nick Miller** bio.
+**Nick Miller** I'm a computer scientist and art historian, graduating with a bachelor's degree in each. In computer science, I'm focused on web development/design and IT. I'm a big proponent of the open source movement, so I enjoyed working further with my beloved Linux on this project. In art history, I'm drawn to 19th century European works, and have been dipping my toes in the ocean of classical Greco-Roman art. After graduation, I'll still be at CSU as an IT support technician and procurement specialist (and plan to continue with a master's degree). 
 
 **Kelly Payne** My background is in Education, where I taught for eight years in a private school and then began homeschooling twelve years ago. I needed a change in careers and decided to go into the field of Computer Science. I will graduate spring of 2025 with a bachelors in Computer Science with the focus of software systems. In my software engineering course, I really developed a great interest in neural network programming with ai. My group was responsible for developing a model that would accurately predict whether a patient would develop alzheimer's disease. Our ensemble model containing two neural networks (FNN and MLP) and three machine learning models with an average of 90% for testing accuracy. My coding experience comes from course work and personal projects. The coding languages I have experience in are: Python, Java, Assemble, COBOL, C# in Object Oriented, and C++ in Linux.
 
