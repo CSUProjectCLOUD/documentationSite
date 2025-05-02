@@ -70,16 +70,15 @@ This will interact with OpenStack Compute (nova), Identity (keystone),
 Image service (glance), and Networking (neutron)
 
 #### Nova
-
+Ultimately, not used but Nova is the compute service in OpenStack responsible for managing and orchestrating virtual machine instances. It handles tasks such as provisioning, scheduling, and lifecycle management of VMs across a cloud infrastructure. Nova interacts with other OpenStack components—like Neutron for networking and Cinder for block storage—to deliver full compute functionality. It supports multiple hypervisors, including KVM, QEMU, and VMware, and is designed to scale horizontally, making it suitable for large-scale cloud environments.
 #### Glance
-
-\-
+Ultimately, not used but Glance is the image service in OpenStack, responsible for discovering, registering, and retrieving virtual machine disk images. It acts as a central repository where users and services can upload and store images in various formats (such as QCOW2, RAW, VMDK). Glance supports image metadata, making it easier to manage and filter images. It can store images locally or integrate with external storage backends like Swift, Ceph, or HTTP. Glance enables compute services like Nova to boot instances from these images, playing a critical role in instance provisioning.
 
 #### Neutron
-
-\-
+Ultimately, not used but Neutron is the networking service in OpenStack that provides "networking as a service" between interface devices managed by other OpenStack services. It handles the creation and management of networks, subnets, routers, and IP address allocation. Neutron supports both flat and complex network topologies, including VLANs, VXLANs, and GRE tunnels, and integrates with various networking technologies and plugins such as Open vSwitch, Linux Bridge, and SDN controllers. It also offers advanced services like load balancing, firewalls, and VPNs. Neutron allows users to define isolated tenant networks, ensuring secure and scalable multi-tenant environments.
 
 #### Keystone
+Ultimately, not used but Keystone is the identity service in OpenStack that provides authentication, authorization, and service discovery. It acts as the central point for managing users, roles, and permissions across all OpenStack services. Keystone supports multiple authentication methods, including username/password, token-based access, and external systems like LDAP. It issues tokens that clients use to interact securely with other OpenStack components. Keystone also maintains a service catalog, listing all available services and their endpoints, enabling seamless integration and communication within the OpenStack ecosystem.
 
 #### -
 
